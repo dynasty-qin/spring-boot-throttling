@@ -6,7 +6,10 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Author : Harry
- * Description :
+ * Description : 获取用户真实IP
+ * 需配合以下 nginx 配置使用
+ * proxy_set_header        X-Real-IP       $remote_addr;
+ * proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
  * Date : 2020-08-20 16:14
  */
 public class IpUtils {
